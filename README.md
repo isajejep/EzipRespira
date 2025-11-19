@@ -1,2 +1,169 @@
-# EzipRespira
-Campaña para concientizar sobre la emision de CO2
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿¡Qué estás respirando!?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+            color: #1e293b;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background-color: #22c55e; /* Color verde vibrante */
+            border-radius: 9999px;
+        }
+        .card-bg-negative {
+            background: linear-gradient(145deg, #fef2f2 0%, #fee2e2 100%);
+            border-left: 5px solid #ef4444; /* Rojo para el problema */
+        }
+        .card-bg-positive {
+            background: linear-gradient(145deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 5px solid #22c55e; /* Verde para la solución */
+        }
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Hero Section -->
+    <header class="bg-gray-900 text-white py-12 px-6 sm:px-10 rounded-b-xl shadow-2xl">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-3 leading-tight">
+                La Ciudad Respira. ¿Y vos?
+            </h1>
+            <p class="text-gray-300 text-lg">
+                El transporte que elegiss cada mañana tiene un costo. Descubrí el impacto real en tu salud, tu bolsillo y el futuro de nuestra ciudad.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-6 sm:p-8">
+
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold text-red-600 mb-6">El costo oculto</h2>
+            <p class="text-gray-600 mb-8">El uso masivo de vehículos de combustión es una carga pesada que pagamos todos los días, incluso si no nos damos cuenta.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Consecuencia 1: Aire y Salud -->
+                <div class="card-bg-negative p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="icon-container bg-red-500 text-white">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002.944 12c0 4.97 4.03 9.056 9.056 9.056s9.056-4.086 9.056-9.056A12.007 12.007 0 0021.618 7.984z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-red-700">Pulmones</h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">Las partículas PM2.5 y el dióxido de nitrógeno penetran en tus pulmones, contribuyendo a enfermedades respiratorias, cardíacas y reduciendo la esperanza de vida. Es como fumar el tráfico.</p>
+                </div>
+
+                <!-- Consecuencia 2: Estrés y Ruido -->
+                <div class="card-bg-negative p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="icon-container bg-red-500 text-white">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9l-2.828 2.829m5.656 5.656L18.364 15.536m-9.9-2.828l-2.829 2.828m5.656-5.656l2.828-2.829M7.05 7.05L5 9.172l-2.05-2.05-2.122-2.121m16.97 16.97l-2.122-2.121-2.05-2.05-2.121-2.122M12 21V3m8.5 13H3.5"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-red-700">Estrés y Ruido</h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">La contaminación acústica (bocinas, motores) aumenta los niveles de cortisol, el estrés crónico, la irritabilidad y puede llevar a problemas de sueño y audición. Tu paz mental está en juego!</p>
+                </div>
+
+                <!-- Consecuencia 3: Tiempo y Espacio -->
+                <div class="card-bg-negative p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="icon-container bg-red-500 text-white">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-red-700">Tiempo y Espacio</h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">El tráfico te roba horas de vida que podrías usar en ocio o descanso. Además, los vehículos no sostenibles consumen un espacio valioso que podría ser parques, ciclovías o zonas peatonales.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección 2: El Retorno (Ventajas del Transporte Sostenible) -->
+        <section class="mb-16">
+            <h2 class="section-title text-3xl font-bold text-green-600 mb-6">Ventajas del Cambio</h2>
+            <p class="text-gray-600 mb-8">El transporte sostenible no es solo mejor para el planeta, es la mejor inversión que puedes hacer en tu propia vida.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Ventaja 1: Salud Física y Mental -->
+                <div class="card-bg-positive p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="icon-container bg-green-500 text-white">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-green-700">Salud Integral</h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">Moverte activamente: usa la bicicleta, caminá a los lugares que puedas! Mejorá tu condición cardiovascular y libera endorfinas.</p>
+                </div>
+
+                <!-- Ventaja 2: Ahorro y Eficiencia -->
+                <div class="card-bg-positive p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="icon-container bg-green-500 text-white">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c-1.11 0-2 .448-2 1s.89 1 2 1 2 .448 2 1-.89 1-2 1m-6 2h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-green-700">Ahorro Inteligente</h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">Olvídate del costo de la gasolina, el mantenimiento excesivo y los altos impuestos vehiculares. El transporte sostenible es significativamente más económico y eficiente a largo plazo.</p>
+                </div>
+
+                <!-- Ventaja 3: Ciudad para las Personas -->
+                <div class="card-bg-positive p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="icon-container bg-green-500 text-white">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20v-2m0 2H7m10 0h5m-2-5a3 3 0 00-3-3H9a3 3 0 00-3 3m2-3a3 3 0 013-3h2a3 3 0 013 3m-4 10v-2a3 3 0 01-3-3H6a3 3 0 01-3-3V7a3 3 0 013-3h12a3 3 0 013 3v8a3 3 0 01-3 3h-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-green-700">Comunidad y Espacio</h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">Menos vehículos = menos ruido y menos congestión. Esto crea ciudades más habitables, seguras y sociales, donde las personas, y no los coches, son el centro de la planificación urbana.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="text-center py-10 bg-white rounded-xl shadow-2xl border border-gray-100">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">¡Es hora de elegir un mejor camino!</h2>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Te mostramos el problema. Ahora súmate a la solución y explora alternativas que cuidan tu futuro y el de tu entorno.</p>
+
+            <a href="#QueEstasRespirando" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+                Me sumo al #QueEstasRespirando
+            </a>
+            <p class="mt-4 text-sm text-gray-500">Cada paso cuenta.</p>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-6 mt-10 bg-gray-900 text-gray-400">
+        <p>© 2025 Proyecto Ezip. Una iniciativa para respirar mejor.</p>
+    </footer>
+
+</body>
+</html>
